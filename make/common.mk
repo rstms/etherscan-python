@@ -28,6 +28,7 @@ names:
 	@echo src_dirs=$(src_dirs)
 	@echo python_src=$(python_src)
 	@echo git_commit=$(git_commit)
+	@echo wheel=$(wheel)
 
 	
 ## list make targets with descriptions
