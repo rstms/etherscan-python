@@ -9,6 +9,7 @@ python_src := $(foreach dir,$(src_dirs),$(shell find $(dir) -name \*.py) )
 other_src := $(call makefiles) pyproject.toml
 src := $(python_src) $(other_src)
 makefiles = Makefile $(wildcard make/*.mk)
+git_commit != git log -1 | awk '{print $$2; exit}'
 
 # sanity checks
 $(if $(project),,$(error failed to read project name from pyproject.toml))
@@ -26,6 +27,7 @@ names:
 	@echo version=$(version)
 	@echo src_dirs=$(src_dirs)
 	@echo python_src=$(python_src)
+	@echo git_commit=$(git_commit)
 
 	
 ## list make targets with descriptions
