@@ -15,3 +15,7 @@ docs
 
 # eggs
 *egg*
+
+.black
+.flake8
+.errors

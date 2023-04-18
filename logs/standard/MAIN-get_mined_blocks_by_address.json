@@ -4,8 +4,13 @@
   "kwargs": {
     "address": "0x9dd134d14d1e65f84b706d6f205cd5b1cd03a46b"
   },
-  "log_timestamp": "2023-04-18-07:49:41",
+  "log_timestamp": "2023-04-18-16:35:36",
   "res": [
+    {
+      "blockNumber": "17075009",
+      "timeStamp": "1681838627",
+      "blockReward": "18254308016601914"
+    },
     {
       "blockNumber": "16999166",
       "timeStamp": "1680901727",

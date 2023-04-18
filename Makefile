@@ -1,8 +1,11 @@
 install:
 	pip install -e .
 
+uninstall:
+	pip uninstall -y rstms-etherscan-python
+	
 .PHONY: test
-test:
+unitest:
 	bash ./run_tests.sh $(API_KEY)
 
 clean:
@@ -10,6 +13,4 @@ clean:
 	rm -rf build *.egg-info
 	rm -f .black .flake8 .errors .coverage
 
-fmt:
-	black -l 135 etherscan
-	flake8 --max-line-len 135 etherscan
+include $(wildcard make/*.mk)

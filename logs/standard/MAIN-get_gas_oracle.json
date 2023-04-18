@@ -2,13 +2,13 @@
   "method": "get_gas_oracle",
   "module": "gastracker",
   "kwargs": {},
-  "log_timestamp": "2023-04-18-07:49:58",
+  "log_timestamp": "2023-04-18-16:34:52",
   "res": {
-    "LastBlock": "17073672",
-    "SafeGasPrice": "46",
-    "ProposeGasPrice": "46",
-    "FastGasPrice": "46",
-    "suggestBaseFee": "45.034945421",
-    "gasUsedRatio": "0.3223937,0.465988466666667,0.405120166666667,0.548309433333333,0.3618775"
+    "LastBlock": "17076250",
+    "SafeGasPrice": "83",
+    "ProposeGasPrice": "84",
+    "FastGasPrice": "86",
+    "suggestBaseFee": "82.605657518",
+    "gasUsedRatio": "0.5171163,0.6472847,0.598855966666667,0.462479433333333,0.474484133333333"
   }
 }

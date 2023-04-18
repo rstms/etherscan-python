@@ -10,6 +10,11 @@ CONFIG_PATH = "etherscan/configs/{}-stable.json"
 API_KEY = os.environ["API_KEY"]  # Encrypted env var by Travis
 
 
+def test_init():
+    api = Etherscan(API_KEY)
+    assert api
+
+
 def load(fname):
     with open(fname, "r") as f:
         return json.load(f)
