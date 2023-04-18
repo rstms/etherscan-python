@@ -10,4 +10,3 @@ requirements-docs.txt: pyproject.toml
 	tq -r '.project["optional-dependencies"].docs|.[]' $< >$@
 
 requirements-clean:
-	rm -f requirements*.txt

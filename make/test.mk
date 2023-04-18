@@ -9,3 +9,7 @@ test: fmt
 ### pytest with break to debugger
 debug: fmt
 	pytest -v --pdb $(test_cases)
+
+test-clean:
+	rm -f .coverage
+	rm -rf .tox

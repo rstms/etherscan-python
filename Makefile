@@ -16,8 +16,6 @@ unitest:
 	bash ./run_tests.sh $(API_KEY)
 
 clean:
-	find . -type d -name __pycache__ -exec rm -rf "{}" +
-	rm -rf build *.egg-info
-	rm -f .black .flake8 .errors .coverage
+	$(MAKE) $(addsuffix -clean,$(notdir $(basename $(wildcard make/*.mk))))
 
 include $(wildcard make/*.mk)

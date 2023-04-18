@@ -16,7 +16,9 @@ docs
 # eggs
 *egg*
 
+.fmt
 .black
 .flake8
 .errors
 dist
+postactivate

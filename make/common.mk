@@ -64,3 +64,9 @@ ifndef virtualenv
   virtualenv = $(if $(filter $(require_virtualenv),no),not required,$(shell which python | grep -E virt\|venv))
   $(if $(virtualenv),,$(error virtualenv not detected))
 endif
+# make clean targets
+
+common-clean:
+	rm -f .pyproject.toml.*
+	find . -type d -name '__pycache__' -exec rm -rf {} +
+	find . -name '*~' -exec rm -f {} +

@@ -1,10 +1,8 @@
 # version - automatic version management
-
+ 
 # - Prevent version changes with uncommited changes
 # - tag and commit version changes
 # - Use 'lightweight tags'
-#
-.PHONY: bump bump-patch bump-minor bump-major version-update version-clean
 
 define BUMPVERSION_CFG
 [bumpversion]
@@ -43,9 +41,9 @@ version-update:
 	$(call gitclean)
 	[ -f .bumpversion.cfg ] || { echo "$$BUMPVERSION_CFG" >.bumpversion.cfg; git add .bumpversion.cfg; }
 	$(MAKE) requirements.txt requirements-dev.txt requirements-docs.txt
-	git add requirements*.txt
+	git add requirements.txt requirements-dev.txt requirements-docs.txt
 	sed -E -i $(module)/version.py -e "s/(.*__timestamp__.*=).*/\1 \"$$(date --rfc-3339=seconds)\"/"
-	git add $(module)/version.py
+	git add $(module)/version.py VERSION
 	@echo "Updated version.py timestamp and requirements.txt"
 
 # clean up version tempfiles
