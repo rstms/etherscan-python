@@ -9,4 +9,5 @@ release: .release
 
 
 release-clean:
+	rm -f .release
 
