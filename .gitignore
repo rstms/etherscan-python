@@ -22,3 +22,4 @@ docs
 .errors
 dist
 postactivate
+.release
