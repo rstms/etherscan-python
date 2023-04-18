@@ -36,7 +36,7 @@ dist: $(if $(DISABLE_TOX),,tox)
 ### create a github release and upload assets
 release: dist
 	$(call check_wheel)
-	@set -e;\
+	set -e;\
 	if [ "$(call latest_release)" = "$(version)" ]; then \
 	  echo "Version $(version) is already released"; \
 	else \
