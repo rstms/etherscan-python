@@ -44,8 +44,6 @@ version-update:
 	[ -f .bumpversion.cfg ] || { echo "$$BUMPVERSION_CFG" >.bumpversion.cfg; git add .bumpversion.cfg; }
 	$(MAKE) requirements.txt requirements-dev.txt requirements-docs.txt
 	git add requirements*.txt
-	$(MAKE) Dockerfile
-	git add Dockerfile
 	sed -E -i $(module)/version.py -e "s/(.*__timestamp__.*=).*/\1 \"$$(date --rfc-3339=seconds)\"/"
 	git add $(module)/version.py
 	@echo "Updated version.py timestamp and requirements.txt"
