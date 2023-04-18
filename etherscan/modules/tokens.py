@@ -1,7 +1,7 @@
-from etherscan.enums.actions_enum import ActionsEnum as actions
-from etherscan.enums.fields_enum import FieldsEnum as fields
-from etherscan.enums.modules_enum import ModulesEnum as modules
-from etherscan.enums.tags_enum import TagsEnum as tags
+from ..enums.actions_enum import ActionsEnum as actions
+from ..enums.fields_enum import FieldsEnum as fields
+from ..enums.modules_enum import ModulesEnum as modules
+from ..enums.tags_enum import TagsEnum as tags
 
 
 class Tokens:

@@ -4,9 +4,10 @@ from importlib import resources
 import requests
 
 import etherscan
-from etherscan import configs
-from etherscan.enums.fields_enum import FieldsEnum as fields
-from etherscan.utils.parsing import ResponseParser as parser
+
+from . import configs
+from .enums.fields_enum import FieldsEnum as fields
+from .utils.parsing import ResponseParser as parser
 
 
 class Etherscan:
