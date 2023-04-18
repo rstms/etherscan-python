@@ -1,3 +1,10 @@
+# pyproject makefile
+
+default: help
+
+dev:
+	pip install -e .[dev]
+
 install:
 	pip install -e .
 
