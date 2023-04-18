@@ -5,7 +5,7 @@ wheel = dist/$(module)-$(version)-py2.py3-none-any.whl
 $(wheel): $(src) pyproject.toml
 	flit build
 
-wheel: $(wheel) test
+wheel: $(wheel) $(if $(DISABLE_TOX),,tox)
 
 dist: wheel
 
