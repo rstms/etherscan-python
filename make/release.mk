@@ -1,6 +1,6 @@
 ### create a new github release
 
-.release: wheel
+.release: $(wheel)
 	gh release create v$(version) --generate-notes --target master
 	gh release upload v$(version) $(wheel)
 	touch $@
