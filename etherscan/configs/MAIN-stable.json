@@ -153,6 +153,12 @@
       "address": "0xBB9bc244D798123fDe783fCc1C72d3Bb8C189413"
     }
   },
+  "get_contract_creator_and_creation_tx_hash": {
+    "module": "contracts",
+    "kwargs": {
+      "addresses": ["0xBB9bc244D798123fDe783fCc1C72d3Bb8C189413"]
+    }
+  },
   "get_contract_execution_status": {
     "module": "transactions",
     "kwargs": {

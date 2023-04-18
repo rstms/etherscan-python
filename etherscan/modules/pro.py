@@ -1,17 +1,11 @@
-from functools import reduce
-from typing import List
-
 from etherscan.enums.actions_enum import ActionsEnum as actions
 from etherscan.enums.fields_enum import FieldsEnum as fields
 from etherscan.enums.modules_enum import ModulesEnum as modules
-from etherscan.enums.tags_enum import TagsEnum as tags
 
 
 class Pro:
     @staticmethod
-    def get_hist_eth_balance_for_address_by_block_no(
-        address: str, block_no: int
-    ) -> str:
+    def get_hist_eth_balance_for_address_by_block_no(address: str, block_no: int) -> str:
         url = (
             f"{fields.MODULE}"
             f"{modules.ACCOUNT}"
@@ -125,9 +119,7 @@ class Pro:
         return url
 
     @staticmethod
-    def get_hist_erc20_token_total_supply_by_contract_address_and_block_no(
-        contract_address: str, block_no: int
-    ) -> str:
+    def get_hist_erc20_token_total_supply_by_contract_address_and_block_no(contract_address: str, block_no: int) -> str:
         url = (
             f"{fields.MODULE}"
             f"{modules.STATS}"

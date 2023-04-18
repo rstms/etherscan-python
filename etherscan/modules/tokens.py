@@ -18,9 +18,7 @@ class Tokens:
         return url
 
     @staticmethod
-    def get_acc_balance_by_token_and_contract_address(
-        contract_address: str, address: str
-    ) -> str:
+    def get_acc_balance_by_token_and_contract_address(contract_address: str, address: str) -> str:
         url = (
             f"{fields.MODULE}"
             f"{modules.ACCOUNT}"

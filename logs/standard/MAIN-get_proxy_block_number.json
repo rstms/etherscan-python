@@ -1,0 +1,7 @@
+{
+  "method": "get_proxy_block_number",
+  "module": "proxy",
+  "kwargs": {},
+  "log_timestamp": "2023-04-18-07:49:59",
+  "res": "0x1048608"
+}

@@ -6,25 +6,13 @@ from etherscan.enums.modules_enum import ModulesEnum as modules
 class Blocks:
     @staticmethod
     def get_block_reward_by_block_number(block_no: str) -> str:
-        url = (
-            f"{fields.MODULE}"
-            f"{modules.BLOCK}"
-            f"{fields.ACTION}"
-            f"{actions.GET_BLOCK_REWARD}"
-            f"{fields.BLOCKNO}"
-            f"{block_no}"
-        )
+        url = f"{fields.MODULE}" f"{modules.BLOCK}" f"{fields.ACTION}" f"{actions.GET_BLOCK_REWARD}" f"{fields.BLOCKNO}" f"{block_no}"
         return url
 
     @staticmethod
     def get_est_block_countdown_time_by_block_number(block_no: str) -> str:
         url = (
-            f"{fields.MODULE}"
-            f"{modules.BLOCK}"
-            f"{fields.ACTION}"
-            f"{actions.GET_BLOCK_COUNTDOWN}"
-            f"{fields.BLOCKNO}"
-            f"{block_no}"
+            f"{fields.MODULE}" f"{modules.BLOCK}" f"{fields.ACTION}" f"{actions.GET_BLOCK_COUNTDOWN}" f"{fields.BLOCKNO}" f"{block_no}"
         )
         return url
 

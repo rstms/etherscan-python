@@ -28,14 +28,10 @@ class ActionsEnum:
     ETH_ESTIMATE_GAS: str = "eth_estimateGas"
     ETH_GAS_PRICE: str = "eth_gasPrice"
     ETH_GET_BLOCK_BY_NUMBER: str = "eth_getBlockByNumber"
-    ETH_GET_BLOCK_TRANSACTION_COUNT_BY_NUMBER: str = (
-        "eth_getBlockTransactionCountByNumber"
-    )
+    ETH_GET_BLOCK_TRANSACTION_COUNT_BY_NUMBER: str = "eth_getBlockTransactionCountByNumber"
     ETH_GET_CODE: str = "eth_getCode"
     ETH_GET_STORAGE_AT: str = "eth_getStorageAt"
-    ETH_GET_TRANSACTION_BY_BLOCK_NUMBER_AND_INDEX: str = (
-        "eth_getTransactionByBlockNumberAndIndex"
-    )
+    ETH_GET_TRANSACTION_BY_BLOCK_NUMBER_AND_INDEX: str = "eth_getTransactionByBlockNumberAndIndex"
     ETH_GET_TRANSACTION_BY_HASH: str = "eth_getTransactionByHash"
     ETH_GET_TRANSACTION_COUNT: str = "eth_getTransactionCount"
     ETH_GET_TRANSACTION_RECEIPT: str = "eth_getTransactionReceipt"
@@ -48,6 +44,7 @@ class ActionsEnum:
     GET_BLOCK_COUNTDOWN: str = "getblockcountdown"
     GET_BLOCK_NUMBER_BY_TIME: str = "getblocknobytime"
     GET_BLOCK_REWARD: str = "getblockreward"
+    GET_CONTRACT_CREATION: str = "getcontractcreation"
     GET_MINED_BLOCKS: str = "getminedblocks"
     GET_SOURCE_CODE: str = "getsourcecode"
     GET_STATUS: str = "getstatus"

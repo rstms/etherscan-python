@@ -12,6 +12,7 @@ class FieldsEnum:
     CLIENT_TYPE: str = "&clienttype="
     CLOSEST: str = "&closest="
     CONTRACT_ADDRESS: str = "&contractaddress="
+    CONTRACT_ADDRESSES: str = "&contractaddresses="
     DATA: str = "&data="
     END_BLOCK: str = "&endblock="
     END_DATE: str = "&enddate="

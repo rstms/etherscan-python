@@ -1,8 +1,7 @@
 import json
-from datetime import datetime
-import time
-
 import os
+import time
+from datetime import datetime
 from unittest import TestCase
 
 from etherscan.etherscan import Etherscan
@@ -23,7 +22,8 @@ def dump(data, fname):
 
 class Case(TestCase):
     _MODULE = ""
-    _NETS = ["MAIN", "KOVAN", "RINKEBY", "ROPSTEN"]
+    # _NETS = ["MAIN", "KOVAN", "RINKEBY", "ROPSTEN", "GOERLI"]
+    _NETS = ["MAIN", "GOERLI"]
 
     def methods(self, net):
         print(f"\nNET: {net}")

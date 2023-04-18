@@ -24,10 +24,7 @@ class Etherscan:
     def __run(func, api_key: str, net: str):
         def wrapper(*args, **kwargs):
             url = (
-                f"{fields.PREFIX.format(net.lower()).replace('-main','')}"
-                f"{func(*args, **kwargs)}"
-                f"{fields.API_KEY}"
-                f"{api_key}"
+                f"{fields.PREFIX.format(net.lower()).replace('-main','')}" f"{func(*args, **kwargs)}" f"{fields.API_KEY}" f"{api_key}"
             )
             r = requests.get(url, headers={"User-Agent": ""})
             return parser.parse(r)

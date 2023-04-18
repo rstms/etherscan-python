@@ -8,3 +8,16 @@ from .modules.proxy import Proxy as proxy
 from .modules.stats import Stats as stats
 from .modules.tokens import Tokens as tokens
 from .modules.transactions import Transactions as transactions
+
+__all__ = [
+    "Etherscan",
+    "accounts",
+    "blocks",
+    "contracts",
+    "gastracker",
+    "pro",
+    "proxy",
+    "stats",
+    "tokens",
+    "transactions",
+]

@@ -20,10 +20,5 @@ class GasTracker:
     @staticmethod
     def get_gas_oracle() -> str:
         # NOTE: gas_price in wei, result in seconds
-        url = (
-            f"{fields.MODULE}"
-            f"{modules.GASTRACKER}"
-            f"{fields.ACTION}"
-            f"{actions.GAS_ORACLE}"
-        )
+        url = f"{fields.MODULE}" f"{modules.GASTRACKER}" f"{fields.ACTION}" f"{actions.GAS_ORACLE}"
         return url

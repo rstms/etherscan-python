@@ -13,6 +13,7 @@ class ResponseParser:
         else:
             # GETH or Parity proxy msg format
             # TODO: see if we need those values
-            jsonrpc = content["jsonrpc"]
-            cid = int(content["id"])
+            # jsonrpc = content["jsonrpc"]
+            # cid = int(content["id"])
+            pass
         return result

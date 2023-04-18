@@ -11,4 +11,3 @@ class ModulesEnum:
     STATS: str = "stats"
     TOKEN: str = "token"
     TRANSACTION: str = "transaction"
-

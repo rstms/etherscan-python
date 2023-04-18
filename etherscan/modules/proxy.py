@@ -7,12 +7,7 @@ from etherscan.enums.tags_enum import TagsEnum as tags
 class Proxy:
     @staticmethod
     def get_proxy_block_number() -> str:
-        url = (
-            f"{fields.MODULE}"
-            f"{modules.PROXY}"
-            f"{fields.ACTION}"
-            f"{actions.ETH_BLOCK_NUMBER}"
-        )
+        url = f"{fields.MODULE}" f"{modules.PROXY}" f"{fields.ACTION}" f"{actions.ETH_BLOCK_NUMBER}"
         return url
 
     @staticmethod
@@ -156,18 +151,11 @@ class Proxy:
     @staticmethod
     def get_proxy_gas_price() -> str:
         # NOTE: Results are in WEI
-        url = (
-            f"{fields.MODULE}"
-            f"{modules.PROXY}"
-            f"{fields.ACTION}"
-            f"{actions.ETH_GAS_PRICE}"
-        )
+        url = f"{fields.MODULE}" f"{modules.PROXY}" f"{fields.ACTION}" f"{actions.ETH_GAS_PRICE}"
         return url
 
     @staticmethod
-    def get_proxy_est_gas(
-        to: str, data: str, value: str, gas_price: str, gas: str
-    ) -> str:
+    def get_proxy_est_gas(to: str, data: str, value: str, gas_price: str, gas: str) -> str:
         url = (
             f"{fields.MODULE}"
             f"{modules.PROXY}"

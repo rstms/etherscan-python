@@ -44,7 +44,10 @@ class Accounts:
 
     @staticmethod
     def get_normal_txs_by_address(
-        address: str, startblock: int, endblock: int, sort: str,
+        address: str,
+        startblock: int,
+        endblock: int,
+        sort: str,
     ) -> str:
         # NOTE: Returns the last 10k events
         url = (
@@ -65,7 +68,12 @@ class Accounts:
 
     @staticmethod
     def get_normal_txs_by_address_paginated(
-        address: str, page: int, offset: int, startblock: int, endblock: int, sort: str,
+        address: str,
+        page: int,
+        offset: int,
+        startblock: int,
+        endblock: int,
+        sort: str,
     ) -> str:
         url = (
             f"{fields.MODULE}"
@@ -89,7 +97,10 @@ class Accounts:
 
     @staticmethod
     def get_internal_txs_by_address(
-        address: str, startblock: int, endblock: int, sort: str,
+        address: str,
+        startblock: int,
+        endblock: int,
+        sort: str,
     ) -> str:
         # NOTE: Returns the last 10k events
         url = (
@@ -110,7 +121,12 @@ class Accounts:
 
     @staticmethod
     def get_internal_txs_by_address_paginated(
-        address: str, page: int, offset: int, startblock: int, endblock: int, sort: str,
+        address: str,
+        page: int,
+        offset: int,
+        startblock: int,
+        endblock: int,
+        sort: str,
     ) -> str:
         url = (
             f"{fields.MODULE}"
@@ -135,19 +151,16 @@ class Accounts:
     @staticmethod
     def get_internal_txs_by_txhash(txhash: str) -> str:
         # NOTE: Returns the last 10k events
-        url = (
-            f"{fields.MODULE}"
-            f"{modules.ACCOUNT}"
-            f"{fields.ACTION}"
-            f"{actions.TXLIST_INTERNAL}"
-            f"{fields.TXHASH}"
-            f"{txhash}"
-        )
+        url = f"{fields.MODULE}" f"{modules.ACCOUNT}" f"{fields.ACTION}" f"{actions.TXLIST_INTERNAL}" f"{fields.TXHASH}" f"{txhash}"
         return url
 
     @staticmethod
     def get_internal_txs_by_block_range_paginated(
-        startblock: int, endblock: int, page: int, offset: int, sort: str,
+        startblock: int,
+        endblock: int,
+        page: int,
+        offset: int,
+        sort: str,
     ) -> str:
         # NOTE: Returns the last 10k events
         url = (
@@ -170,7 +183,10 @@ class Accounts:
 
     @staticmethod
     def get_erc20_token_transfer_events_by_address(
-        address: str, startblock: int, endblock: int, sort: str,
+        address: str,
+        startblock: int,
+        endblock: int,
+        sort: str,
     ) -> str:
         # NOTE: Returns the last 10k events
         url = (
@@ -190,10 +206,7 @@ class Accounts:
         return url
 
     @staticmethod
-    def get_erc20_token_transfer_events_by_contract_address_paginated(
-        contract_address: str, page: int, offset: int, sort: str
-    ) -> str:
-
+    def get_erc20_token_transfer_events_by_contract_address_paginated(contract_address: str, page: int, offset: int, sort: str) -> str:
         url = (
             f"{fields.MODULE}"
             f"{modules.ACCOUNT}"
@@ -214,7 +227,6 @@ class Accounts:
     def get_erc20_token_transfer_events_by_address_and_contract_paginated(
         contract_address: str, address: str, page: int, offset: int, sort: str
     ) -> str:
-
         url = (
             f"{fields.MODULE}"
             f"{modules.ACCOUNT}"
@@ -235,7 +247,10 @@ class Accounts:
 
     @staticmethod
     def get_erc721_token_transfer_events_by_address(
-        address: str, startblock: int, endblock: int, sort: str,
+        address: str,
+        startblock: int,
+        endblock: int,
+        sort: str,
     ) -> str:
         url = (
             f"{fields.MODULE}"
@@ -310,9 +325,7 @@ class Accounts:
         return url
 
     @staticmethod
-    def get_mined_blocks_by_address_paginated(
-        address: str, page: int, offset: int
-    ) -> str:
+    def get_mined_blocks_by_address_paginated(address: str, page: int, offset: int) -> str:
         url = (
             f"{fields.MODULE}"
             f"{modules.ACCOUNT}"
