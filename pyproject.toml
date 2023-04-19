@@ -40,6 +40,7 @@ dev = [
     "pyrate-limiter",
     "pytest",
     "pytest-datadir",
+    "tox"
   ]
 docs = [
     "m2r2",

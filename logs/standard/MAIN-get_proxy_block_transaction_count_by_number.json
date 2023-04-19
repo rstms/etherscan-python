@@ -4,6 +4,10 @@
   "kwargs": {
     "tag": "0x10FB78"
   },
-  "log_timestamp": "2023-04-18-16:50:46",
-  "res": "0x3"
+  "log_timestamp": "2023-04-18-20:13:33",
+  "res": {
+    "jsonrpc": "2.0",
+    "cid": 1,
+    "result": "0x3"
+  }
 }

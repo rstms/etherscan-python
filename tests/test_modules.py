@@ -4,10 +4,16 @@ import time
 from datetime import datetime
 from unittest import TestCase
 
-from etherscan.etherscan import Etherscan
+from rstms_etherscan_python import Etherscan
+from rstms_etherscan_python.exceptions import (
+    EtherscanErrorResponse,
+    EtherscanUnauthorizedEndpoint,
+)
 
-CONFIG_PATH = "etherscan/configs/{}-stable.json"
+CONFIG_PATH = "rstms_etherscan_python/configs/{}-stable.json"
 API_KEY = os.environ["API_KEY"]  # Encrypted env var by Travis
+
+TEST_API_PRO_ENDPOINTS = "TEST_API_PRO_ENDPOINTS" in os.environ
 
 
 def test_init():
@@ -38,8 +44,20 @@ class Case(TestCase):
         for fun, v in config.items():
             if not fun.startswith("_"):  # disabled if _
                 if v["module"] == self._MODULE:
-                    res = getattr(etherscan, fun)(**v["kwargs"])
-                    print(f"METHOD: {fun}, RTYPE: {type(res)}")
+                    try:
+                        res = getattr(etherscan, fun)(**v["kwargs"])
+                        rtype = type(res)
+                    except EtherscanUnauthorizedEndpoint as exc:
+                        if TEST_API_PRO_ENDPOINTS:
+                            raise exc from exc
+                        else:
+                            rtype = type(exc)
+                            res = repr(exc)
+                    except EtherscanErrorResponse as exc:
+                        rtype = type(exc)
+                        res = repr(exc)
+
+                    print(f"METHOD: {fun}, RTYPE: {rtype}")
                     # Create log files (will update existing ones)
                     fname = f"logs/standard/{net}-{fun}.json"
                     log = {

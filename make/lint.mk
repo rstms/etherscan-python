@@ -14,4 +14,4 @@ fix:
 	fixlint $(src_dirs)
 
 lint-clean:
-	rm -f .black .flake8 .errors
+	rm -f .black .flake8 .errors .fmt

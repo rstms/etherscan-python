@@ -2,26 +2,15 @@
   "method": "get_block_reward_by_block_number",
   "module": "blocks",
   "kwargs": {
-    "block_no": "2165403"
+    "block_no": "12697906"
   },
-  "log_timestamp": "2023-04-18-17:27:27",
+  "log_timestamp": "2023-04-18-20:13:08",
   "res": {
-    "blockNumber": "2165403",
-    "timeStamp": "1472533979",
-    "blockMiner": "0x13a06d3dfe21e0db5c016c03ea7d2509f7f8d1e3",
-    "blockReward": "5314181600000000000",
-    "uncles": [
-      {
-        "miner": "0xbcdfc35b86bedf72f0cda046a3c16829a2ef41d1",
-        "unclePosition": "0",
-        "blockreward": "3750000000000000000"
-      },
-      {
-        "miner": "0x0d0c9855c722ff0c78f21e43aa275a5b8ea60dce",
-        "unclePosition": "1",
-        "blockreward": "3750000000000000000"
-      }
-    ],
-    "uncleInclusionReward": "312500000000000000"
+    "blockNumber": "12697906",
+    "timeStamp": "1624552238",
+    "blockMiner": "0x04668ec2f57cc15c381b461b9fedab5d451c8f7f",
+    "blockReward": "2364322167425632735",
+    "uncles": [],
+    "uncleInclusionReward": "0"
   }
 }

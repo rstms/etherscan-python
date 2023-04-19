@@ -94,13 +94,13 @@
   "get_block_reward_by_block_number": {
     "module": "blocks",
     "kwargs": {
-      "block_no": "2165403"
+      "block_no": "12697906"
     }
   },
-  "get_est_block_countdown_time_by_block_number": {
+  "_get_est_block_countdown_time_by_block_number": {
     "module": "blocks",
     "kwargs": {
-      "block_no": "99999999"
+      "block_no": "16701588"
     }
   },
   "get_block_number_by_timestamp": {

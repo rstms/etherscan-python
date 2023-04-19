@@ -4,6 +4,10 @@
   "kwargs": {
     "address": "0x2910543af39aba0cd09dbb2d50200b3e800a63d2"
   },
-  "log_timestamp": "2023-04-18-16:50:48",
-  "res": "0xaf64"
+  "log_timestamp": "2023-04-18-20:13:34",
+  "res": {
+    "jsonrpc": "2.0",
+    "cid": 1,
+    "result": "0xaf64"
+  }
 }

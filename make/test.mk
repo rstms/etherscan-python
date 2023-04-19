@@ -8,8 +8,25 @@ test: fmt
 
 ### pytest with break to debugger
 debug: fmt
-	pytest -v --pdb $(test_cases)
+	pytest -sv --pdb $(test_cases)
 
-test-clean:
-	rm -f .coverage
+### check code coverage quickly with the default Python
+coverage:
+	coverage run --source $(module) -m pytest
+	coverage report -m
+
+
+.tox: $(python_src)
+	$(if $(DISABLE_TOX),@echo '<tox disabled>',tox)
+
+### run tests wit tox
+tox: .tox
+
+tox-clean:
 	rm -rf .tox
+
+test-clean: tox-clean
+	rm -f .coverage
+
+test-sterile: test-clean
+	find logs -not -name README.md -not -name logs -exec rm -f '{}' +

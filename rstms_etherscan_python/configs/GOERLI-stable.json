@@ -81,14 +81,14 @@
       "gas": "0x5f5e0ff"
     }
   },
-  "get_est_confirmation_time": {
+  "_get_est_confirmation_time": {
     "module": "gastracker",
     "kwargs": {
       "gas_price": "2000000000"
     }
   },
-  "get_gas_oracle": {
-    "module": "gastracker",
+  "_get_gas_oracle": {
+   "module": "gastracker",
     "kwargs": {}
   },
   "get_block_reward_by_block_number": {
@@ -97,10 +97,10 @@
       "block_no": "2165403"
     }
   },
-  "get_est_block_countdown_time_by_block_number": {
+  "_get_est_block_countdown_time_by_block_number": {
     "module": "blocks",
     "kwargs": {
-      "block_no": "99999999"
+      "block_no": "16701588"
     }
   },
   "get_block_number_by_timestamp": {

@@ -3,8 +3,6 @@ from importlib import resources
 
 import requests
 
-import etherscan
-
 from . import configs
 from .enums.fields_enum import FieldsEnum as fields
 from .utils.parsing import ResponseParser as parser
@@ -37,6 +35,8 @@ class Etherscan:
 
     @classmethod
     def from_config(cls, api_key: str, config_path: str, net: str):
+        import rstms_etherscan_python as etherscan
+
         config = cls.__load_config(config_path)
         for func, v in config.items():
             if not func.startswith("_"):  # disabled if _

@@ -67,9 +67,19 @@ ifndef virtualenv
   virtualenv = $(if $(filter $(require_virtualenv),no),not required,$(shell which python | grep -E virt\|venv))
   $(if $(virtualenv),,$(error virtualenv not detected))
 endif
-# make clean targets
 
+# make clean targets
 common-clean:
 	rm -f .pyproject.toml.*
 	find . -type d -name '__pycache__' -exec rm -rf {} +
 	find . -name '*~' -exec rm -f {} +
+
+common-sterile:
+
+### remove temporary files
+clean:
+	$(MAKE) $(addsuffix -clean,$(notdir $(basename $(wildcard make/*.mk))))
+
+### remove all derived files
+sterile: clean
+	$(MAKE) $(addsuffix -sterile,$(notdir $(basename $(wildcard make/*.mk))))
