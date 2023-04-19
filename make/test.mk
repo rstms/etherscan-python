@@ -16,7 +16,7 @@ coverage:
 	coverage report -m
 
 
-.tox: $(python_src)
+.tox: $(filter-out $(module)/version.py,$(python_src))
 	$(if $(DISABLE_TOX),@echo '<tox disabled>',tox)
 
 ### run tests wit tox

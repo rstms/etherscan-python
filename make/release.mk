@@ -5,7 +5,7 @@
 	gh release upload v$(version) $(wheel)
 	touch $@
 
-release: tox .release
+release: .release
 
 
 release-clean:
