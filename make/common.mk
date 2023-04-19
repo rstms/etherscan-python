@@ -75,11 +75,12 @@ common-clean:
 	find . -name '*~' -exec rm -f {} +
 
 common-sterile:
+	@:
 
 ### remove temporary files
 clean:
-	$(MAKE) $(addsuffix -clean,$(notdir $(basename $(wildcard make/*.mk))))
+	@$(MAKE) --no-print-directory $(addsuffix -clean,$(notdir $(basename $(wildcard make/*.mk))))
 
 ### remove all derived files
 sterile: clean
-	$(MAKE) $(addsuffix -sterile,$(notdir $(basename $(wildcard make/*.mk))))
+	@$(MAKE) --no-print-directory $(addsuffix -sterile,$(notdir $(basename $(wildcard make/*.mk))))

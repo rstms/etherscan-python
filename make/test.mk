@@ -29,4 +29,4 @@ test-clean: tox-clean
 	rm -f .coverage
 
 test-sterile: test-clean
-	find logs -not -name README.md -not -name logs -exec rm -f '{}' +
+	find logs -type f -not -name README.md -exec rm -f '{}' +

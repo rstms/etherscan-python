@@ -2,10 +2,10 @@
   "method": "get_proxy_gas_price",
   "module": "proxy",
   "kwargs": {},
-  "log_timestamp": "2023-04-18-20:13:45",
+  "log_timestamp": "2023-04-18-20:26:55",
   "res": {
     "jsonrpc": "2.0",
     "cid": 73,
-    "result": "0x58c"
+    "result": "0x539"
   }
 }

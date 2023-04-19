@@ -15,3 +15,4 @@ dist-clean:
 	rm -rf build *.egg-info .eggs wheels
 
 dist-sterile:
+	@:

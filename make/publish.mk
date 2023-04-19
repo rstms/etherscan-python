@@ -22,6 +22,9 @@ publish-clean:
 	rm -f .dist
 	rm -rf .tox
 
+publish-sterile:
+	@:
+
 # functions
 define require_pypi_config =
 $(if $(wildcard ~/.pypirc),,$(error publish failed; ~/.pypirc required))

@@ -40,8 +40,8 @@ bump-major: version-update
 version-update:
 	$(call gitclean)
 	[ -f .bumpversion.cfg ] || { echo "$$BUMPVERSION_CFG" >.bumpversion.cfg; git add .bumpversion.cfg; }
-	$(MAKE) requirements.txt requirements-dev.txt requirements-docs.txt
-	git add requirements.txt requirements-dev.txt requirements-docs.txt
+	$(MAKE) --no-print-directory requirements
+	git add requirements*.txt
 	sed -E -i $(module)/version.py -e "s/(.*__timestamp__.*=).*/\1 \"$$(date --rfc-3339=seconds)\"/"
 	git add $(module)/version.py VERSION
 	@echo "Updated version.py timestamp and requirements.txt"
@@ -49,3 +49,6 @@ version-update:
 # clean up version tempfiles
 version-clean:
 	@:
+
+version-sterile:
+	rm -f .bumpversion.cfg

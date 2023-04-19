@@ -15,3 +15,6 @@ fix:
 
 lint-clean:
 	rm -f .black .flake8 .errors .fmt
+
+lint-sterile:
+	@:
