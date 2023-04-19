@@ -2,10 +2,10 @@
   "method": "get_proxy_block_number",
   "module": "proxy",
   "kwargs": {},
-  "log_timestamp": "2023-04-18-20:26:49",
+  "log_timestamp": "2023-04-18-20:29:39",
   "res": {
     "jsonrpc": "2.0",
     "cid": 83,
-    "result": "0x871679"
+    "result": "0x871681"
   }
 }

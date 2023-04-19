@@ -7,7 +7,7 @@
     "endblock": 999999999,
     "sort": "asc"
   },
-  "log_timestamp": "2023-04-18-20:26:13",
+  "log_timestamp": "2023-04-18-20:29:03",
   "res": [
     {
       "blockNumber": "4325753",
@@ -28,7 +28,7 @@
       "gasUsed": "274574",
       "cumulativeGasUsed": "669283",
       "input": "deprecated",
-      "confirmations": "4527358"
+      "confirmations": "4527367"
     },
     {
       "blockNumber": "4325755",
@@ -49,7 +49,7 @@
       "gasUsed": "36775",
       "cumulativeGasUsed": "332336",
       "input": "deprecated",
-      "confirmations": "4527356"
+      "confirmations": "4527365"
     }
   ]
 }

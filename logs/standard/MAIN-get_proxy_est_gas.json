@@ -8,6 +8,6 @@
     "gas_price": "0x51da038cc",
     "gas": "0x5f5e0ff"
   },
-  "log_timestamp": "2023-04-18-20:26:48",
-  "res": "EtherscanErrorResponse(\"response={'jsonrpc': '2.0', 'id': 1, 'error': {'code': -32000, 'message': 'err: max fee per gas less than block base fee: address 0x0000000000000000000000000000000000000000, maxFeePerGas: 21971876044 baseFee: 43728676339 (supplied gas 12510499)'}}\")"
+  "log_timestamp": "2023-04-18-20:29:39",
+  "res": "EtherscanErrorResponse(\"response={'jsonrpc': '2.0', 'id': 1, 'error': {'code': -32000, 'message': 'err: max fee per gas less than block base fee: address 0x0000000000000000000000000000000000000000, maxFeePerGas: 21971876044 baseFee: 43088500909 (supplied gas 12510499)'}}\")"
 }
